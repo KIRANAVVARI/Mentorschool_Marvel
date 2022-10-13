@@ -1,6 +1,10 @@
-from __init__ import *
-from Activity_2 import *
-def Filtering_characters(data,column,condition,value):
+from Packaging.Marvel_API_Case.Class_OOps  import *
+def Filtering_characters():
+    data = input('Enter the data frame:')
+    column=input('Enter column name:')
+    condition=input('Enter Any condition on that column:')
+    value=input('Enter the value:')
+    
     if condition=='>':
         required_data = data[data[column]>value]
     elif condition=='<':
@@ -14,4 +18,3 @@ def Filtering_characters(data,column,condition,value):
         
     return required_data
 
-Filtering_characters(total_characters,'comics.available','>=',50)

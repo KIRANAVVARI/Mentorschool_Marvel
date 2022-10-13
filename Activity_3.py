@@ -1,16 +1,18 @@
-from __init__ import *
+from Packaging.Marvel_API_Case.Class_OOps import *
 from keys import *
-def calling_API(api_key,hash,namestartswith):
-    api_key = api_key
-    hash = hash
+import json
+
+def calling_API():
+    api_key = input('Enter api_key')
+    priv_key = input('Enter private key')
     limit='100'
-    namestartswith=namestartswith
+    namestartswith=input('Enter namestartswith')
     try:
         timestamp = datetime.datetime.now().strftime('%Y-%m-%d%H:%M:%S')
 
         def hash_params():
             hash_md5 = hashlib.md5()
-            hash_md5.update(f'{timestamp}{hash}{api_key}'.encode('utf-8'))
+            hash_md5.update(f'{timestamp}{priv_key}{api_key}'.encode('utf-8'))
             hashed_params = hash_md5.hexdigest()
 
             return hashed_params
@@ -34,4 +36,4 @@ def calling_API(api_key,hash,namestartswith):
     except ValueError:
         print('Entered invalid arguments!Check again!!')
 
-calling_API(Public_Key,Private_Key,'3')
+calling_API()

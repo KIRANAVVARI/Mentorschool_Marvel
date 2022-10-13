@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+Marvel_API_Case/Class_OOps.py
+Marvel_API_Case/__init__.py
+Marvel_API_Kiran.egg-info/PKG-INFO
+Marvel_API_Kiran.egg-info/SOURCES.txt
+Marvel_API_Kiran.egg-info/dependency_links.txt
+Marvel_API_Kiran.egg-info/top_level.txt
